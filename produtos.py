@@ -27,6 +27,10 @@ class Produtos():
         except:
             print("Algo deu errado na criação do produto. Tente novamente.")
 
+    def get_codigo_de_barras(self):
+        """
+        """
+        return self.codigo_de_barras
 
     def __str__(self) -> str:
         return f"Nome: {self.nome} - Marca: {self.marca} - Código de Barras: {self.codigo_de_barras}."
