@@ -12,10 +12,10 @@ class Produto():
         """
         #todas as marcas cadastradas
         lista_de_marcas = [str(cada_marca.name) for cada_marca in Marca]
-
+        marca = marca.upper()
         try:
             #verifica se a marca fornecida existe
-            if marca.upper() not in lista_de_marcas:
+            if marca not in lista_de_marcas:
                 raise MarcaNaoEncontradaError
             
             #se tiver tudo certo, cria a instância e configura os atributos
