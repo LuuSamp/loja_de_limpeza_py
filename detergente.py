@@ -1,6 +1,6 @@
-from produtos import Produtos
+from produtos import Produto
 
-class Detergente(Produtos):
+class Detergente(Produto):
     """
     """
     numero_de_detergentes = 0

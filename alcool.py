@@ -1,6 +1,6 @@
-from produtos import Produtos
+from produtos import Produto
 
-class Alcool(Produtos):
+class Alcool(Produto):
     """
     """
     numero_de_alcool = 0

@@ -1,6 +1,6 @@
-from produtos import Produtos
+from produtos import Produto
 
-class Amaciante(Produtos):
+class Amaciante(Produto):
     """
     """
     numero_de_amaciantes = 0

@@ -1,7 +1,7 @@
 from marca import Marca
 from excecoes import MarcaNaoEncontradaError
 
-class Produtos():
+class Produto():
     """
     """
 
@@ -20,12 +20,12 @@ class Produtos():
             
             #se tiver tudo certo, cria a instância e configura os atributos
             else:
-                self.marca = marca
+                self.marca = Marca[marca]
                 self.nome = nome
                 self.codigo_de_barras = codigo_de_barras
 
                 #editando o atributo estático de contagem
-                Produtos.numero_de_produtos += 1
+                Produto.numero_de_produtos += 1
 
         except MarcaNaoEncontradaError:
             print("A marca inserida foi inválida.")
