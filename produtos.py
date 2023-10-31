@@ -1,4 +1,5 @@
 from marca import Marca
+from excecoes import MarcaNaoEncontradaError
 
 class Produtos():
     """
@@ -12,7 +13,7 @@ class Produtos():
         lista_de_marcas = [str(cada_marca.name) for cada_marca in Marca]
         try:
             if marca.upper() not in lista_de_marcas:
-                raise KeyError
+                raise MarcaNaoEncontradaError
             
             else:
                 self.marca = marca
@@ -20,7 +21,7 @@ class Produtos():
                 self.codigo_de_barras = codigo_de_barras
                 Produtos.numero_de_produtos += 1
 
-        except KeyError:
+        except MarcaNaoEncontradaError:
             print("A marca inserida foi inválida.")
 
         except:
